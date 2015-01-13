@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="icvApp">
+
+<head>
+  <!-- SCROLLS -->
+
+      <!-- CSS -->
+    <link rel="stylesheet" href="public/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <!-- custom styles -->
+    <!-- JS -->
+    <script src="public/libs/angular/angular.js"></script>
+    <script src="public/libs/angular-route/angular-route.js"></script>
+    <script src="public/libs/angular-animate/angular-animate.js"></script>
+    <script src="public/libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- add javascripts -->
+    <script src="public/libs/jquery/dist/jquery.min.js"></script>
+    <script src="public/libs/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- AngularjsProject -->
+  <script src="public/app.js"></script>
+  <!-- Controllers-->
+  <script src="public/js/controllers/aboutController.js"></script>
+  <script src="public/js/controllers/contactController.js"></script>
+  <script src="public/js/controllers/mainController.js"></script>
+  <script src="public/js/controllers/loginController.js"></script>
+  <script src="public/js/controllers/guestController.js"></script>
+
+
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+<div class="container">
+<!--   <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Angular Routing Example</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+        <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+        <li><a href="#addguest"><i class="fa fa-comment"></i> Guest</a></li>
+      </ul>
+    </div>
+  </nav> -->
+
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="public/images/Shield_Trans.gif" alt="ICV" height="20" width="20"></a>
+
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li ><a href="#">Home </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+    
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> USER</a></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">logout</a></li>
+            <li class="divider"></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+
+
+  <div id="main">
+  
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view></div>
+    
+  </div>
+  
+  <footer class="text-right" align="right" style="position:absolute; text-align: right; color:#ccc; bottom:0; ">
+    <p>  Copyright &#169; 2015 | Edge360 </p>
+
+  </footer>
+  </div>
+</body>
+
+</html>

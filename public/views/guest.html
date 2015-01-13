@@ -1,0 +1,55 @@
+<h2>Please Add Guest</h2>
+<div class="panel panel-default">
+    <div class="panel-body">
+        <form ng-submit="submitGuest(icvForm);">
+            <div class="form-group has-feedback">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" name='email' id="exampleInputEmail1" placeholder="user@source.com" ng-model="icvForm.email" required>
+                <span class="glyphicon glyphicon-remove form-control-feedback" ng-click="icvForm.email=''"></span>
+
+                <!-- <span class="help-inline" ng-show="submitted && form.email.$error.required">Required</span>
+                <span class="help-inline" ng-show="submitted && form.email.$error.email">Invalid email</span> -->
+            </div>
+            <div class="form-group has-feedback">
+                <label for="exampleInputPassword1">Name</label>
+                <input type="text" class="form-control" name='name' id="exampleInputPassword1" placeholder="First Name, Last Name" ng-model="icvForm.name" required> 
+                <span class="glyphicon glyphicon-remove form-control-feedback" ng-click="icvForm.name=''"></span>
+                <!-- <span class="help-inline" ng-show="submitted && form.name.$error.required">Required</span> -->
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Date</label>
+                <p class="input-group">
+                    <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="icvForm.date" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" /> 
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span> 
+                </p>
+                <!-- <input type='date' class="form-control" ng-model="icvForm.date"/> -->
+            </div>
+
+            <button type="submit" class="btn btn-default pull-right" >Schedule</button>
+        </form>
+    </div>
+</div>
+<hr>
+
+<div style=" border: 1px solid #cccccc; border-radius: 5px;" ng-show="slides.length>0">
+    <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides | orderBy:'$index'" active="slide.active">
+            <div class="row" style="height:100px;">
+                <div class="col-xs-1 col-sm-2"> </div>
+                <div class="col-xs-3 col-sm-2" style="height:100%;  padding:.7em 0; position:relative;"> <span class="glyphicon glyphicon-user" style='font-size: 250%; color:white; padding:.5em; background-color:#638ca6; border-radius: 5px; text-align: right; '>
+                </span> </div>
+                <div class="col-xs-5 col-sm-5" style="height:100%; background-color: #ffffff; text-align:left; padding-top:5px;">
+                    <h4><p style="opacity:.5;"></p> "{{slide.title}}" {{slide.message}} </h4>
+                    <p>{{slide.text | date : 'MMMM dd, yyyy'}}</p>
+                </div>
+                <div class="col-xs-1 col-sm-1" style="height:100%;  padding:.7em 0; position:relative;"> <span class="glyphicon glyphicon-{{slide.status}}" style='font-size: 250%;  padding:.5em; text-align: right; '>
+                </span> </div>
+                <div class="col-xs-1 col-sm-2" style="height:100%;  padding:.7em 0; position:relative;"> </div>
+            </div>
+        </slide>
+    </carousel>
+</div>
+
+

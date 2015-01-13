@@ -1,0 +1,33 @@
+  nav .logo{
+      width:1em;
+      height:auto;
+    
+    }
+
+    .carousel-indicators{
+    	bottom:10px;
+    	display: none;
+    }
+    .carousel-caption{
+    	padding-bottom: 0;
+    	bottom:0;
+    	display: none;
+    }
+
+    .carousel-control.left{
+background-image:none;
+    } 
+
+        .carousel-control.right{
+background-image:none;
+    }
+
+    
+    @media (max-width: 480px) {
+    	        .carousel-control.left span{
+		top:40%;
+    }
+        .carousel-control.right span{
+top:40%;
+    }
+    }

@@ -1,0 +1,28 @@
+<div>
+<div class="jumbotron text-center">
+	<h1>Log In</h1>
+	
+
+</div>
+<div class="panel panel-default">
+  <div class="panel-body">
+    	    <form ng-submit="submitGuest(icvForm);">
+            <div class="form-group has-feedback">
+                <label for="exampleInputEmail1">Username</label>
+                <input type="email" class="form-control" name='email' id="exampleInputEmail1" placeholder="user@source.com" ng-model="icvForm.email" required>
+                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+
+            </div>
+            <div class="form-group has-feedback">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" name='name' id="exampleInputPassword1" placeholder="......" ng-model="icvForm.name" required> 
+                <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+  
+            </div>
+
+
+            <button type="submit" class="btn btn-default pull-right" >Log In</button>
+        </form>
+  </div>
+</div>
+</div>
