@@ -33,7 +33,7 @@
 </div>
 <!-- <hr> -->
 
-<div style=" border: 1px solid #cccccc; border-radius: 5px;" ng-show="slides.length>0">
+<div style=" border: 1px solid #cccccc; border-radius: 5px; margin-bottom:3em;" ng-show="slides.length>0">
     <carousel interval="myInterval">
         <slide ng-repeat="slide in slides | orderBy:'$index'" active="slide.active">
             <div class="row" style="height:100px;">
